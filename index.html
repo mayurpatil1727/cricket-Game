@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cricket game</title>
+  <style>
+    html{
+      font-size: 10px;
+    }
+    .heading{
+      font-size: 6rem;
+      height: 10rem;
+      width: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(red , white);
+    }
+    
+    .btncontainer{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .btn{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      margin: 1rem;
+      background: linear-gradient(orange , white);
+    }
+  </style>
+</head>
+<body>
+  <h1 class="heading">Cricket Game</h1>
+  <div class="btncontainer">
+    <button class="btn" onclick="
+      const userchosen = `you have chosen bat`;
+      let randomnumber = Math.random() * 3 ; // this will generate random number between 0 to 3 
+     
+      let computerchoice ;
+      if(randomnumber > 0 && randomnumber <= 1)
+      {
+         computerchoice = `bat`;
+        
+      }else if( randomnumber > 1 && randomnumber <= 2)
+      {
+         computerchoice = `ball`  
+        
+      }else {
+         computerchoice = `wicket`
+      }
+       computerchoice = `computer choice is ${computerchoice} `;
+
+      let resultmsg ;
+      if (computerchoice.includes(`ball`))
+      {
+        resultmsg = `user won`;
+      }
+      else if(computerchoice.includes(`bat`)){
+        resultmsg = `it is a tie`;
+      }
+      else if (computerchoice.includes(`wicket`) ){
+        resultmsg = `Computer has won`;
+      }
+
+      resultmsg = `result is ${resultmsg} ` ;
+
+      alert( `${userchosen} ${computerchoice} ${resultmsg}` );
+      ">Bat</button>
+    <button class="btn" onclick="
+    const userchosen1 = `you have chosen ball`;
+      let randomnumber1 = Math.random() * 3 ; // this will generate random number between 0 to 3 
+     
+      let computerchoice1 ;
+      if(randomnumber1 > 0 && randomnumber1 <= 1)
+      {
+         computerchoice1 = `bat`;
+        
+      }else if( randomnumber1 > 1 && randomnumber1 <= 2)
+      {
+         computerchoice1 = `ball`  
+        
+      }else {
+         computerchoice1 = `wicket`
+      }
+       computerchoice1 = `computer choice is ${computerchoice1} `;
+
+      let resultmsg1 ;
+      if (computerchoice1.includes(`ball`))
+      {
+        resultmsg1 = `it is a tie`;
+      }
+      else if(computerchoice1.includes(`bat`)){
+        resultmsg1 = `computer has won`;
+      }
+      else if (computerchoice1.includes(`wicket`) ){
+        resultmsg1 = `you has won`;
+      }
+
+      resultmsg1 = `result is ${resultmsg1} ` ;
+
+      alert( `${userchosen1} ${computerchoice1} ${resultmsg1}` );
+    ">ball</button>
+    <button class="btn" onclick="
+    const userchosen2 = `you have chosen wicket`;
+      let randomnumber2 = Math.random() * 3 ; // this will generate random number between 0 to 3 
+     
+      let computerchoice2 ;
+      if(randomnumber2 > 0 && randomnumber2 <= 1)
+      {
+         computerchoice2 = `bat`;
+        
+      }else if( randomnumber2 > 1 && randomnumber2 <= 2)
+      {
+         computerchoice2 = `ball`  
+        
+      }else {
+         computerchoice2 = `wicket`
+      }
+       computerchoice2 = `computer choice is ${computerchoice2} `;
+
+      let resultmsg2 ;
+      if (computerchoice2.includes(`ball`))
+      {
+        resultmsg2 = `computer won`;
+      }
+      else if(computerchoice1.includes(`bat`)){
+        resultmsg2 = `you have won`;
+      }
+      else if (computerchoice1.includes(`wicket`) ){
+        resultmsg2 = `this is a tie`;
+      }
+
+      resultmsg2 = `result is ${resultmsg2} ` ;
+
+      alert( `${userchosen2} ${computerchoice2} ${resultmsg2}` );
+    ">Wicket</button>
+  </div>
+
+</body>
+</html>
